@@ -1,0 +1,18 @@
+package ag.gwi.app.pm.utils.fsm.v2;
+
+/**
+ * 
+ * @author Benoit Fernandez (AGFA ID : AWUDP, mail : benoit.fernandez@agfa.com)
+ */
+class Transition {
+    Event event;
+    State destinationState;
+    
+    Transition(Event e, State s) {
+        this.event = e;
+        this.destinationState = s;
+    }
+    
+    Event getEvent() { return this.event; }
+    State getDestinationState() { return this.destinationState; }
+}

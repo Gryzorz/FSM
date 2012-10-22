@@ -1,0 +1,12 @@
+package ag.gwi.app.pm.utils.fsm.v2;
+
+import ag.gwi.app.pm.utils.fsm.v2.FiniteStateMachineException;
+
+/**
+ * @author Benoit Fernandez (AGFA ID : AWUDP, mail : benoit.fernandez@agfa.com)
+ */
+public class TransitionAlreadyExistException extends FiniteStateMachineException {
+    public TransitionAlreadyExistException(State from, Event event) {
+        super("There is no transition from state " + from + " reacting to event " + event);
+    }
+}
