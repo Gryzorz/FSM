@@ -31,7 +31,7 @@ public interface FiniteStateMachineListener{
      * no matter if you have overridden ony of the other 3 methods. Be careful not to process things
      * twice<br>
      */
-    public void eventOccurred(State from, Event event, State to);
+    void eventOccurred(State from, Event event, State to);
 
     /**
      * This method is called only if the event that occurred produced a change of state that
@@ -42,7 +42,7 @@ public interface FiniteStateMachineListener{
      * @param event the event that occurred
      * @param to the state after the event occurred
      */
-    public void stateChanged(State from, Event event, State to);
+    void stateChanged(State from, Event event, State to);
     
     /**
      * This method is called only if the event that occurred produced a loop that was foreseen
@@ -52,7 +52,7 @@ public interface FiniteStateMachineListener{
      * @param state the state before and after the event occurred
      * @param event the event that occurred
      */
-    public void stateLoop(State state, Event event);
+    void stateLoop(State state, Event event);
     
     /**
      * This method is called only if the event that occurred was not foreseen (i.e : there
@@ -62,5 +62,5 @@ public interface FiniteStateMachineListener{
      * @param from the state of the state machine when the event occurred (and after it occurred)
      * @param event the event that occurred
      */
-    public void unexistingTransition(State from, Event event);
+    void unexistingTransition(State from, Event event);
 }
